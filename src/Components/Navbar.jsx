@@ -9,7 +9,6 @@ const Navbar = () => {
           setActive(e);
           setToggle(true)
     }
-    console.log(toggle)
     return (
         <>
        <nav className="navbar sticky-top navbar-expand-lg w-100 mx-auto shadow">
