@@ -1,19 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const Datascience = () => {
+const Datascience = ({data}) => {
     const [dataSci,setDataSci] = useState()
-    const fetchData = async() =>{
-        try{
-          const response = await axios.get("../../courses.json");
-          const jsonData = response.data
-          setDataSci(jsonData.filter((e)=>e.type === 'data'))
-        }catch(error){
-          console.error('Error fetching data:', error);
-        }
-       }
     useEffect(()=>{
-          fetchData() 
+      setDataSci(data.filter((e)=>e.type === 'data'))
     },[])
     return (
      <>

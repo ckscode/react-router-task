@@ -1,20 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const Cyber = () => {
+const Cyber = ({data}) => {
        const [cyber,setCyber] = useState()
-       const fetchData = async() =>{
-        try{
-          const response = await axios.get("../../courses.json");
-          const jsonData = response.data
-          setCyber(jsonData.filter((e)=>e.type === 'cyber'))
-        }catch(error){
-          console.error('Error fetching data:', error);
-        }
-       }
-    useEffect(()=>{
-          fetchData() 
-    },[])
+       useEffect(()=>{
+        setCyber(data.filter((e)=>e.type === 'cyber'))
+       },[])
+       
    
     return (
         <>

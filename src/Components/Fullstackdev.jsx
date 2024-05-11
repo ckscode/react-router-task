@@ -3,18 +3,10 @@ import React, { useEffect, useState } from 'react';
 
 const Fullstack = ({data}) => {
     const [full,setFull] = useState()
-    const fetchData = async() =>{
-        try{
-          const response = await axios.get("../../courses.json");
-          const jsonData = response.data
-          setFull(jsonData.filter((e)=>e.type === 'fsd'))
-        }catch(error){
-          console.error('Error fetching data:', error);
-        }
-       }
     useEffect(()=>{
-          fetchData() 
+      setFull(data.filter((e)=>e.type === 'fsd'))
     },[])
+    
     return (
      <>
        <h2 className='text-center mt-3'>Fullstack Development</h2>
