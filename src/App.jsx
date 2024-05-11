@@ -181,7 +181,7 @@ const App = () => {
         <Route path="/data" element={<Datascience data={data}/>}/>
         <Route path="/cyber" element={<Cyber data={data}/>}/>
         <Route path="/career" element={<Career data={data}/>}/>
-        <Route path="#" element={<PageNotFound/>}/>
+        <Route path="*" element={<PageNotFound/>}/>
     </Routes>
     </div>
     </div>
