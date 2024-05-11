@@ -1,13 +1,13 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const Datascience = () => {
-    const [dataSci,setDataSci] = useState()
+const Fullstack = ({data}) => {
+    const [full,setFull] = useState()
     const fetchData = async() =>{
         try{
-          const response = await axios.get('./courses.json');
+          const response = await axios.get("../../courses.json");
           const jsonData = response.data
-          setDataSci(jsonData.filter((e)=>e.type === 'data'))
+          setFull(jsonData.filter((e)=>e.type === 'fsd'))
         }catch(error){
           console.error('Error fetching data:', error);
         }
@@ -17,8 +17,8 @@ const Datascience = () => {
     },[])
     return (
      <>
-       <h2 className='text-center mt-3'>Data Science</h2>
-        {dataSci&&dataSci.map((element,index)=>{
+       <h2 className='text-center mt-3'>Fullstack Development</h2>
+        {full&&full.map((element,index)=>{
          return(
              <div key={element.id} className='col-sm-12 col-md-6 col-lg-4 col-xl-3 d-flex align-items-center p-3'>
                  <div className='card w-100 shadow border-0 rounded-3'>
@@ -35,4 +35,4 @@ const Datascience = () => {
     );
 };
 
-export default Datascience;
+export default Fullstack;

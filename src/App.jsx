@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from './Componenrts/Navbar';
+import Navbar from './Components/Navbar';
 import { Route, Routes } from 'react-router-dom';
-import Fullstack from './Componenrts/Fullstackdev';
-import Datascience from './Componenrts/Datascience';
-import Cyber from './Componenrts/Cyber';
-import Career from './Componenrts/Career';
-import All from './Componenrts/All';
+import Fullstack from './Components/Fullstackdev';
+import Datascience from './Components/Datascience';
+import Cyber from './Components/Cyber';
+import Career from './Components/Career';
+import All from './Components/All';
 import axios from 'axios';
 
 

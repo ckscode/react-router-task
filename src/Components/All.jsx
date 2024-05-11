@@ -1,11 +1,12 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
+
 const All = () => {
     const [all,setAll] = useState([])
     const fetchData = async() =>{
         try{
-          const response = await axios.get('./courses.json');
+          const response = await axios.get("../../courses.json");
           const jsonData = response.data
           setAll(jsonData.filter((e)=>e.type !== 'career'))
         }catch(error){
