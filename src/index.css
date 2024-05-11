@@ -1,0 +1,44 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+}
+
+.brand{
+  text-decoration:none;
+  font-size:2.5em;
+}
+
+
+.nav-link.active{
+  background-color:#0DBA4B !important;
+  color:white !important;
+}
+
+
+.card{
+  height:320px;
+}
+.card-img-top{
+  height:220px !important;
+}
+
+.app{
+  position:relative !important;
+  overflow: hidden !important;
+}
+.content{
+  position:fixed;
+  top:50px;
+  left:0;
+  bottom:0;
+  overflow-y: auto;
+  
+}
+nav{
+  background-color: white ;
+  position:fixed !important;
+  z-index:999;
+  top:0;
+}
